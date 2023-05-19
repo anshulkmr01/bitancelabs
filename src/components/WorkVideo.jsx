@@ -1,8 +1,9 @@
- const WorkVideo = () => {
+ const WorkVideo = ({url}) => {
   return (
     <>
-    <div className="bg-gray-200 w-full sm:h-72 h-52 rounded-3xl p-5 relative  overflow-hidden">
-        <div className="absolutew-full h-full top-0 left-0 right-0 bottom-0 flex justify-center items-center">
+    <video className="bg-gray-200 w-full h-full bg-black rounded-3xl relative overflow-hidden" autoPlay muted controls loop>
+        <source src={url}/>
+        <div className="absolutew-full h-full top-0 left-0 right-0 bottom-0 flex justify-center items-center z-10">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="#787878" className="w-20">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -10,7 +11,7 @@
                 </svg>
             </span>
         </div>
-    </div>
+    </video>
     </>
   )
 }

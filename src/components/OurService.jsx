@@ -1,83 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import service_sheald from '../assets/service/service.png'
+import {Service} from '../constains/services'
 const OurService = () => {
+const [enableOnclick, setEnableOnClick] = useState(false)
+const [serviceDesc, setServiceDesc] = useState({ title: Service[0].serviceTitle, body: Service[0].serviceDesc, image: Service[0].serviceImg})
+const [activeService, setActiveService] = useState(1)
   return (
     <div className='px-10 py-24 xs:px-20 md:px-40 bg-image'>
-        <div  className='grid sm:grid-cols-2 gap-10'>
+        <div className='grid sm:grid-cols-2 gap-10'>
             <div>
-                <h1 className='primary-text font-bold md:text-7xl text-5xl highlight-underline'>Our Services</h1>
+                <h1 className='primary-text font-bold sm:text-6xl xs:text-5xl text-4xl highlight-underline'>Our Services</h1>
                 <div className='text-xl primary-text mt-20'>
-                    <p className='mt-10'>
-                        Custom Web and Mobile App Developmemt
-                    </p>
-                    <p className='mt-10'>
-                        NFT Development (NFT Mining, Stalking, Marketplace)
-                    </p>
-                    <p className='mt-10'>
-                        De Fi Plateform
-                    </p>
-                    <p className='mt-10'>
-                        Cryptocurrency Exchange
-                    </p>
-                    <p className='mt-10'>
-                        Crypto wallets
-                    </p>
-                    <p className='mt-10'>
-                        Token, and Custom coin Creation etc.
-                    </p>
-                    <p className='mt-10'>
-                        Blockchain Development Services
-                    </p>
-                    <p className='mt-10'>
-                        <h1 className='secondary-text font-bold text-2xl highlight-underline-sm'>Blockchain security</h1>
-                    </p>
-                    <p className='mt-10'>
-                        Metaverse/ Gaming
-                    </p>
-                    <p className='mt-10'>
-                        Custom Software Development
-                    </p>
-                    <p className='mt-10'>
-                        AI/ML application
-                    </p>
-                    <p className='mt-10'>
-                        Cyber Sceurity
-                    </p>
-                    <p className='mt-10'>
-                        Software penetration testing
-                    </p>
-                    <p className='mt-10'>
-                        Graphics, Content writing, Video Creation
-                    </p>
+                    {
+                        Service.map(item => {
+                            return(
+                                <p key={item.id} className={`mt-10 hover:cursor-pointer ${activeService == item.id && "highlight-underline-sm"}`}
+                                onMouseEnter={ ()=>{
+                                    if(!enableOnclick){
+                                        setServiceDesc({title:item.serviceTitle, body:item.serviceDesc, image: item.serviceImg})
+                                        setActiveService(item.id)
+                                    }  
+                                }
+                                }
+                                
+                                onMouseDown={ ()=>{
+                                    setEnableOnClick(true)
+                                    setServiceDesc({title:item.serviceTitle, body:item.serviceDesc, image: item.serviceImg})
+                                    setActiveService(item.id)
+                                }
+                                }
+                                >{item.serviceTitle}
+                                </p>
+                            )
+                         
+                    })}
+                    
                 </div>
             </div>
             <div className=''>
-                <div className='bg-blue-gradient rounded-3xl p-9'>
+                <div className='bg-blue-gradient rounded-3xl p-9 sticky top-24 min-h-[1250px]'>
                     <div className='flex justify-between items-center'>
-                        <h1 className='font-bold text-3xl '>Blockchain Security</h1>
-                        <img src={service_sheald} className="lg:max-w-[6rem] xs:max-w-[5rem] max-w-[4rem]" />
+                        <h1 className='font-bold text-3xl '>{serviceDesc.title}</h1>
+                        <img src={serviceDesc.image} className="lg:max-w-[6rem] xs:max-w-[5rem] max-w-[4rem]" />
                     </div>
-                    <div className='text-xl '>
-                        <p className='mt-10'>
-                            When it comes to dealing with crypto and tokens, we value and build TRUST. Our Blockchain Security experts are adept at building decentralized systems that duplicates all information, transactions, and sensitive data to all verified members in the network at the same time so that all stockholders are on an equal basis.
-                        </p>
-                        <p className='mt-10'>
-                            Our Specialized Security Auditors follow a two-step protocol for easy Detection and
-                            Elimination of vulnerabilities
-                            discovered in your system. Investigate and double-check the codes for maximum security Recommend and develop
-                            adjustments for safe access of
-                            data
-                        </p>
-                        <p className='mt-10'>
-                            Upon request, our team is equipped to provide an audit report with an executive summary, vulnerability details, and mitigation guidance.
-                        </p>
+                    <div className='text-base '>
+                        {serviceDesc.body.map(desc => (
+                            <p className='mt-10'>
+                                {desc}
+                            </p>
+                        )
+                        )}
                     </div>
                 </div>
             </div>
         </div>
         <div className='text-center mt-32'>
-            <Link to="/contact"><button className='primary-btn font-semibold'>Bitance Now</button></Link>
+            <Link to="/contact"><button className='primary-btn font-semibold'>Get Bitance Solutions</button></Link>
         </div>
     </div>
   )

@@ -17,13 +17,13 @@ const About = () => {
           Bitance Labs is the ultimate white-label solution for all your software development projects. We pride ourselves on top-notch problem-solving expertise to produce the best innovative designs, customized perfectly to our client's goals and aspirations. Our highly motivated and dedicated teams meticulously conduct research and survey to always bring optimum satisfaction to all undertaken projects.
         </p>
         <p className='mt-10 sm:text-2xl' data-aos="fade-up" data-aos-delay="700" data-aos-duration="500">
-          We provide a wide range of IT development and cybersecurity services for businesses operating in the digital world. Our current services include but are not limited to Blockchain Development, Cyber Security, Smart Contracts, Cryptocurrency, NFT Token Development, NFT Market Place Development, Web and Mobile App Development, Game Development as well as Content Writing, Illustration and Graphics, and Video Making.
+          We provide a wide range of IT development and cybersecurity services for businesses operating in the digital world. Our current services include but are not limited to Blockchain Development, Customized Softwares, AI/ML System, Cyber Security, Smart Contracts, NFT Token Development, NFT Market Place Development, Web and Mobile App Development, Game Development as well as Content Writing, Illustration and Graphics, and Video Making.
         </p>
         <p className='mt-10 sm:text-2xl' data-aos="fade-up" data-aos-delay="900" data-aos-duration="500">
-          Our specialists design the best solutions, focusing on the needs of the client. Currently, our workforce is around 30 which comprises Solidity, Rust, TEAL (Algorand), Haskell, Hardhat, Python, Hyperledger, React.Js, Node.Js, Vue.Js, Unity & Unreal Engine developers.
+          Our specialists design the best solutions, focusing on the needs of the client. Currently, our workforce is around 35+ which comprises Solidity, Rust, Aptos, Javascript, Node.js, React.js, Vue.js, Python, Java, C, C++, Flutter, Angular, Truffle, IPFS, Ganache, Chainlink, Reservior, Redux, Express, Php, Laravel, Mysql, Mongodb, Graphql, AWS, Git, Wordpress, Figma, Adobe After Effects, Adobe Photoshop, Adobe Illustrator, Unity & Unreal Engine developers.
         </p>
       </div>
-      <Team/>
+      {/* <Team/> */}
       <Subscribe/>
     </div>
   )

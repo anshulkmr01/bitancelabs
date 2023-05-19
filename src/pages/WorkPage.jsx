@@ -3,7 +3,7 @@ const WorkPage = () => {
   return (
     <div>
         <Navbar/>
-        <WorkHeading/>
+          <WorkHeading/>
         <Footer/>
     </div>
   )

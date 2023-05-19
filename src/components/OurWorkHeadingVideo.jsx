@@ -12,15 +12,15 @@ const OurWorkHeadingVideo = () => {
       </div>
     </div>
     <div className='px-10 py-24 xs:px-20 md:px-40 bg-image'>
-    <div className='grid xs:grid-cols-2 gap-14'>
+    <div className='grid sm:grid-cols-2 grid-cols-1 gap-14'>
       {videoItems.map((video, index) => (
-        <div  className="mt-16">
-          <WorkVideo key={video.id}/>
+        <div className="" key={video.id}>
+          <WorkVideo url={video.url}/>
         </div>
       ))}
     </div>
     <div className='text-center mt-28'>
-      <button className='primary-btn font-semibold'>Download Portfolio</button>
+      <a target="_blank" href='https://drive.google.com/drive/folders/1cJdZZhVTgbmrdA2NXu21_BeNfbMVCWRj?usp=share_link'><button className='primary-btn font-semibold'>Download Portfolio</button></a>
     </div>
     </div>
     </>

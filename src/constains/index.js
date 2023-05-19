@@ -1,3 +1,10 @@
+import video1 from './../assets/videos/bitancelab3.mp4'
+import video2 from './../assets/videos/bitancelab4.mp4'
+import video3 from './../assets/videos/bitancelab1.mp4'
+import video4 from './../assets/videos/bitancelab2.mp4'
+import video5 from './../assets/videos/bitancelab5.mp4'
+import video6 from './../assets/videos/bitancelab6.mp4'
+
 export const inputItems = [
   {
     id: 1,
@@ -29,7 +36,7 @@ export const inputItems = [
   },
   {
     id: 5,
-    placeholder:"Your Name*",
+    label:"Your Name*",
     type : "text",
     name : "name",
 
@@ -38,18 +45,12 @@ export const inputItems = [
     id: 6,
     type : "email",
     name : "text",
-    placeholder : "Email Address or Telegram ID*"
+    label : "Email Address or Telegram ID*"
 
   }
 ]
 
 export const navItems = [
-  {
-    id: "about",
-    title: "About",
-    url:"/",
-    containerId:"about"
-  },
   {
     id: "service",
     title: "Services",
@@ -70,33 +71,33 @@ export const navItems = [
 export const videoItems = [
   {
     id: 1,
-    title: "About",
-    url:"/"
+    title: "",
+    url:video1
   },
   {
     id: 2,
-    title: "3",
-    url:"/"
+    title: "",
+    url:video2
   },
   {
     id: 3,
-    title: "Work",
-    url:"/"
+    title: "",
+    url:video3
   },
   {
     id: 4,
-    title: "Contact",
-    url:"/"
+    title: "",
+    url:video4
   },
   {
     id: 5,
-    title: "Contact",
-    url:"/"
+    title: "",
+    url:video5
   },
   {
     id: 6,
-    title: "Contact",
-    url:"/"
+    title: "",
+    url:video6
   },
 ];
 
@@ -163,15 +164,11 @@ export const videoItems = [
     },
     {
       id: 16,
-      title: "Metaverse evelopment"
+      title: "NFT Gaming Space"
     },
     {
       id: 17,
-      title: "Metaverse Gaming Space"
-    },
-    {
-      id: 18,
-      title: "Metaverse 3D Space"
+      title: "Metaverse Development"
     },
     {
       id: 19,
@@ -187,7 +184,7 @@ export const videoItems = [
     },
     {
       id: 22,
-      title: "AI/ML Model and software"
+      title: "AI/ML Model and Software"
     },
     {
       id: 23,
@@ -195,7 +192,7 @@ export const videoItems = [
     },
     {
       id: 24,
-      title: "Static and Dynamic Development"
+      title: "Static and Dynamic Website Development"
     },
     {
       id: 25,
@@ -203,32 +200,42 @@ export const videoItems = [
     },
     {
       id: 26,
-      title: "Graphics and UI/UX design Services"
+      title: "Graphics and UI/UX Design Services"
     },
     {
       id: 27,
-      title: "Content and blog writing"
+      title: "Content and Blog Writing"
     },
     {
       id: 28,
-      title: "Other (Something out of the box)"
+      title: "Other"
     }
   ];
 
   export const footerMenu = [
     {
       id: 1,
-      url:"",
-      title : "About"
+      url:"/",
+      title : "Home"
     },
     {
       id: 2,
+      url:"/service",
+      title : "Service"
+    },
+    {
+      id: 3,
+      url:"/work",
+      title : "Work"
+    },
+    {
+      id: 4,
       url:"",
       title : "Privacy Policy"
     },
     {
-      id: 3,
-      url:"",
+      id: 5,
+      url:"/contact",
       title : "Contact us"
     }
   ];

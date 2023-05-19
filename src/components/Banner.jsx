@@ -17,7 +17,7 @@ const Banner = () => {
         <h1 className='text-white md:text-7xl text-5xl mt-5 font-semibold'>
           Where innovation never stops
         </h1>
-        <Link to="/contact"><button className='primary-btn mt-10 font-semibold'>Bitance Now</button></Link>
+        <Link to="/contact"><button className='primary-btn mt-10 font-semibold'>Get Bitance Solutions</button></Link>
       </div>
       <div className='animate-float-2s absolute xs:right-20 w-1/3 md:right-44 lg:w-[370px] sm:right-28 xs:top-20 bottom-[-20px]'>
         <img src={rocket} className="w-full" alt="rocket image"/>
